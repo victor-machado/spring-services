@@ -12,10 +12,11 @@ import br.com.lancamento.model.Country;
 @RestController
 public class CountryController {
 	@RequestMapping(value = "/countries", method = RequestMethod.GET, headers = "Accept=application/json")
-	public List<Country> getCountries() {
+	public List<Country> getCountries() throws Exception {
 		List<Country> listOfCountries = new ArrayList<Country>();
 		listOfCountries = createCountryList();
 		return listOfCountries;
+		//throw new Exception("test");
 	}
 
 	@RequestMapping(value = "/country/{id}", method = RequestMethod.GET, headers = "Accept=application/json")

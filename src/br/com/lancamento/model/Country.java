@@ -25,4 +25,9 @@ public class Country {
 	public void setCountryName(String countryName) {
 		this.countryName = countryName;
 	}
+	
+	public String toString(){
+		
+		return "{'id':'" + this.id + "','countryName':'" + this.countryName + "'}";
+	}
 }
